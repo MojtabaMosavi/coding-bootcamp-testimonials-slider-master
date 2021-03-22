@@ -1,0 +1,176 @@
+:root {
+  --dark-Blue: hsl(240, 38%, 20%);
+  --Grayish-Blue: hsl(240, 18%, 77%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+body {
+  color: var(--dark-Blue);
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  font-size: 1.7em;
+  min-width: 23.4rem;
+  max-width: 90rem;
+  background: url("./images/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 30%;
+}
+
+.carousel__container {
+  padding: 3rem 8rem;
+  background-image: url("images/pattern-bg.svg");
+  background-repeat: no-repeat;
+  background-position: 90% 100%;
+  background-size: contain;
+}
+
+.carousel__items {
+  list-style-type: none;
+}
+
+.carousel__item {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  max-width: 70rem;
+  max-height: 33rem;
+  overflow: visible;
+}
+
+.carousel__item .name {
+  padding-top: 2.2rem;
+  font-weight: 700;
+  font-size: 0.6em;
+}
+
+.carousel__item .title {
+  color: var(--Grayish-Blue);
+}
+
+.carousel__text {
+  flex: 1;
+  padding: 2em 0 0 0;
+  z-index: 1;
+  margin: 5rem 0;
+  margin-right: -8rem;
+  font-weight: 300;
+  background-image: url("images/pattern-quotes.svg");
+  background-repeat: no-repeat;
+  background-position: 30% top;
+  background-size: 18%;
+}
+
+.carousel__image {
+  position: relative;
+  flex: 1;
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
+
+.carousel__button {
+  display: flex;
+  border-radius: 100px;
+  height: 3.2rem;
+  width: 5.6rem;
+  left: 32%;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.carousel__button .previous {
+  flex: 1;
+  border-bottom-left-radius: 100px;
+  border-top-left-radius: 100px;
+  background-image: url("images/icon-prev.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.carousel__button .next {
+  flex: 1;
+  border-bottom-right-radius: 100px;
+  border-top-right-radius: 100px;
+  background-image: url("images/icon-next.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: #fff;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+}
+
+@media (max-width: 1100px) {
+  body {
+    min-height: 100vh;
+    padding-top: 5rem;
+  }
+
+  .carousel__container {
+    background: none;
+    padding: 0 1rem;
+  }
+  .carousel__item {
+    flex-direction: column-reverse;
+  }
+
+  .carousel__text {
+    margin: 2rem 0 0 0;
+    padding-top: 1rem;
+    margin-right: 0;
+    text-align: center;
+    font-size: 0.9em;
+    background-position: center top;
+    background-size: 5.6rem;
+  }
+  .carousel__image {
+    padding: 1rem 0 0 0;
+    text-align: center;
+    background-image: url("images/pattern-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-size: contain;
+    background-position: center center;
+  }
+
+  .carousel__image img {
+    width: 100%;
+    height: auto;
+    max-width: 16rem;
+  }
+
+  .carousel__button {
+    left: 40%;
+  }
+  .carousel__text .name {
+    padding: 1rem 0;
+  }
+}
