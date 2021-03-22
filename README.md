@@ -1,3 +1,4 @@
 # coding-bootcamp-testimonials-slider-master
-![](design/desktop-design-slide-2.jpg)
+Desktop view:
+![](design/desktop-design-slide-1.jpg)
 
